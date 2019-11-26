@@ -1,5 +1,6 @@
 # Assembly-MIPS
-        .data
+        
+	.data
 msg:    .asciiz "Insira um numero para listar todos os seus divisores naturais: "
 msg2:   .asciiz " "
 	      .extern foobar 4
@@ -15,7 +16,7 @@ main:   li $v0, 4  			        #Imprimindo a mensagem
       	li $v0, 5			           #Recebendo um inteiro do usuário
       	syscall      
       	move $s0, $v0			       #Movendo o valor para o registrador $s0
-	      add $s1, $s0, $zero		   #Tornando o registrador $s1, igual a $s0
+	    add $s1, $s0, $zero		   		#Tornando o registrador $s1, igual a $s0
 
 for:    sgt $t0, $s1, $zero		   #Comparação do for (i > 0)
 	      beq $t0, $zero, forafor
